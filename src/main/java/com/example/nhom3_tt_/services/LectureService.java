@@ -12,17 +12,17 @@ import java.util.List;
 public interface LectureService {
   LectureResponse create(Lecture lecture);
 
-  @PreAuthorize("hasAuthority('INSTRUCTOR')")
+  @PreAuthorize("hasAuthority('INSTRUCTOR') || hasAuthority('ADMIN')")
   LectureResponse createLecture(
       LectureRequest lecture, MultipartFile video, MultipartFile thumbnail);
 
-  @PreAuthorize("hasAuthority('INSTRUCTOR')")
+  @PreAuthorize("hasAuthority('INSTRUCTOR') || hasAuthority('ADMIN')")
   LectureResponse updateLecture(
       Long id, LectureRequest request, MultipartFile video, MultipartFile thumbnail);
 
   List<LectureResponse> getAllBySectionId(Long sectionId);
 
-  @PreAuthorize("hasAuthority('INSTRUCTOR')")
+  @PreAuthorize("hasAuthority('INSTRUCTOR') || hasAuthority('ADMIN')")
   LectureResponse update(Lecture lecture);
 
   List<LectureResponse> getAll();

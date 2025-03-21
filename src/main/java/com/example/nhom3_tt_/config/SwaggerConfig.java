@@ -25,6 +25,6 @@ public class SwaggerConfig {
     return new OpenAPI()
         .components(new Components().addSecuritySchemes("bearerAuth", securityScheme()))
         .addSecurityItem(new SecurityRequirement().addList("bearerAuth"))
-        .info(new Info().title("FSA HCM JAVA12 TEAM3").version("1.0.0"));
+        .info(new Info().title("LMS (Learning Management System)").version("1.0.0"));
   }
 }
