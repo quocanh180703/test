@@ -28,7 +28,7 @@ public class CartController {
     return ResponseEntity.ok(cartService.getCartById(cartId));
   }
 
-  @GetMapping("/carts/student/{studentId}")
+  @PostMapping("/carts/student/{studentId}")
   public ResponseEntity<?> getOrCreateCartByStudentId(@PathVariable Long studentId) {
     return ResponseEntity.ok(cartService.getOrCreateCartByStudentId(studentId));
   }

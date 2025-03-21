@@ -13,7 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 public interface CourseService {
 
-  @PreAuthorize("hasAuthority('INSTRUCTOR')")
+  @PreAuthorize("hasAuthority('INSTRUCTOR') || hasAuthority('ADMIN')")
   CourseResponse create(CourseRequest courseRequest);
 
   @PreAuthorize("hasAuthority('ADMIN')")
@@ -45,7 +45,7 @@ public interface CourseService {
 
   List<CourseResponse> searchByTitle(String title, Pageable pageable);
 
-  @PreAuthorize("hasAuthority('INSTRUCTOR')")
+  @PreAuthorize("hasAuthority('INSTRUCTOR')|| hasAuthority('ADMIN')")
   CourseResponse update(Long id, CourseRequest newCourse);
 
   @PreAuthorize("hasAuthority('INSTRUCTOR')")

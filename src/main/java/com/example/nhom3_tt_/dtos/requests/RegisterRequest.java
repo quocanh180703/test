@@ -46,6 +46,6 @@ public class RegisterRequest {
   private String fullName;
 
   @NotNull(message = "Role is required")
-  @Pattern(regexp = "^(STUDENT|INSTRUCTOR)$", message = "Role must be either STUDENT or INSTRUCTOR")
+  @Pattern(regexp = "^(STUDENT|INSTRUCTOR|ADMIN)$", message = "Role must be either STUDENT or INSTRUCTOR")
   private String role;
 }
