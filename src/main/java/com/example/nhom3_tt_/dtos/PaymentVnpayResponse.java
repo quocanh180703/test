@@ -18,6 +18,4 @@ public class PaymentVnpayResponse {
     this.message = message;
     this.paymentUrl = paymentUrl;
   }
-  public PaymentVnpayResponse() {
-  }
 }
