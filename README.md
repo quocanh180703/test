@@ -1,4 +1,4 @@
-# Team03_LearningManagementSystem
+# ProjectJavaSpringBoot
 
 ## Getting started
 
